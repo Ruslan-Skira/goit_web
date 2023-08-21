@@ -1,3 +1,4 @@
+
 class LegacySystem:
     def execute_operation(self, value1, value2, operation):
         if operation == "add":
@@ -9,6 +10,7 @@ class LegacySystem:
 
 
 class NewSystem:
+    """У Новій системі ми замінюємо add -> + , substract -> -"""
     def perform_operation(self, operator, value1, value2):
         if operator == "+":
             return value1 + value2

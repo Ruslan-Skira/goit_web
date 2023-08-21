@@ -1,0 +1,27 @@
+from abc import ABC, abstractmethod
+
+class Human(ABC):
+    def __init__(self, name):
+        self.name = name
+    
+    def say(self):
+        return f"Hello my name is {self.name}"
+    @abstractmethod
+    def help_person(self): pass
+
+class MixinDriver():
+    def drive_car(self):
+        return 'I can drive car'
+
+class Ruslan(Human, MixinDriver):
+    def teaching_python(self):
+        return "Whell"
+    
+    def help_person(self):
+        return "I will help"
+    
+    
+m_d = MixinDriver()
+r = Ruslan('Ruslan')
+print(r.help_person())
+print(r.drive_car())

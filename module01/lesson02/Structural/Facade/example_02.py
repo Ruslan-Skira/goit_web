@@ -14,6 +14,8 @@ class ShapeType(Enum):
     CIRCLE = "circle"
     SQUARE = "square"
 
+    
+
 
 class Square:
     def __init__(self, side: float):
@@ -38,14 +40,14 @@ class FacadeShape:
 
     def area_of(self, type_figure: ShapeType):
         area_for_figure = {
-            ShapeType.CIRCLE: self.circle.area_of(),
-            ShapeType.SQUARE: self.square.area_of(),
+            "circle": self.circle.area_of(),
+            "square": self.square.area_of(),
         }
         return area_for_figure.get(type_figure, None)
 
 
 if __name__ == "__main__":
     shape = FacadeShape(42)
-    print(shape.area_of(ShapeType.SQUARE))
-    print(shape.area_of(ShapeType.CIRCLE))
+    print(shape.area_of('square'))
+    print(shape.area_of('circle'))
     print(shape.area_of("ellipse"))

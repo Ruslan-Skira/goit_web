@@ -32,6 +32,6 @@ def prefix_name(name):
 
 
 if __name__ == "__main__":
-    print(prefix_name("Dmytro"))
+    # print(prefix_name("Dmytro"))
     print(prefix_name.__wrapped__("Vasyl"))
-    print(prefix_name.__wrapped__.__wrapped__("Pavel"))
+    # print(prefix_name.__wrapped__.__wrapped__("Pavel"))
