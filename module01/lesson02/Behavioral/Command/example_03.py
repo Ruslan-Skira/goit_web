@@ -1,4 +1,8 @@
 class Operation:
+    """
+    Invoker
+	Application code to provide APIs for add and substitute
+	"""
     def __init__(self, value_one, value_two):
         self.value_one = value_one
         self.value_two = value_two
@@ -18,6 +22,7 @@ class Operation:
 
 
 class AddCommand:
+    """Command 1"""
     def __init__(self, ops: Operation):
         self.ops = ops
 
@@ -26,6 +31,7 @@ class AddCommand:
 
 
 class SubCommand:
+    """Command 2"""
     def __init__(self, ops: Operation):
         self.ops = ops
 

@@ -1,15 +1,28 @@
-# Занятие 1: Development Tools
+# Заняття 1: Development Tools
 
-Объяснить менеджер Pipenv `app_pipenv`
+Пояснити менеджер Pipenv `app_pipenv`
 
-Объяснить менеджер Poetry
-`app_poetry` - новый проект через init
-`app_project` - установка в готовом проекте
+Поясніть менеджер Poetry
+`app_poetry` - новий проект через init
+`app_project` - установка у готовому проекті
 
-Примеры логирования в папке `logging_example`
+Приклади логування в папці `logging_example`
 
-Показать в любом примере процесс отладки приложения
+Показати в будь-якому прикладі процес налагодження програми
 
-Важность форматирования кода.
+Важливість форматування коду за допомогою [black](https://black.readthedocs.io/en/stable/integrations/editors.html).
 
-Типизация.
+  ## Налаштування для VScode.
+
+Шлях можливо інший на різних ОС
+[Посилання](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+на модуль для VScode.
+
+~/Library/Application Support/Code/User/settings.json
+
+`"[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+      },`
+
+## Типізація.
+mypy

@@ -4,7 +4,7 @@ log_format = (
     "%(asctime)s [%(levelname)s] - %(name)s - %(funcName)s(%(lineno)d) - %(message)s"
 )
 
-file_handler = logging.FileHandler("application.logs")
+file_handler = logging.FileHandler("test_logger.logs")
 file_handler.setLevel(logging.ERROR)
 file_handler.setFormatter(logging.Formatter(log_format))
 

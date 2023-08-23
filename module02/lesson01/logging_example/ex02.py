@@ -4,10 +4,15 @@ from logger import get_logger
 logger = get_logger(__name__)
 
 
-def baz():
+def baz() -> str:
     b = 10
+
+
     logger.info("Start baz")
     logger.debug(f"b={b}")
+
+
+
 
 
 def foo():

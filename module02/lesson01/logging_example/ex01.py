@@ -8,7 +8,7 @@ logging.basicConfig(
 def foo(num: int):
     baz = 10
     result = num + baz
-    logging.debug(f"result={result}")
+    logging.info(f"result={result}")
     return result
 
 
