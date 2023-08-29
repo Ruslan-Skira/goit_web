@@ -12,10 +12,13 @@ WORKDIR $APP_HOME
 COPY . .
 
 # Встановимо залежності усередині контейнера
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Позначимо порт де працює програма всередині контейнера
-EXPOSE 5000
+EXPOSE 8000
 
 # Запустимо нашу програму всередині контейнера
 ENTRYPOINT ["python", "main.py"]
+
+# Кожна команда називається шар(layer)

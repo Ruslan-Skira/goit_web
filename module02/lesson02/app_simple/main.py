@@ -7,9 +7,9 @@ app = Flask(__name__)
 def hello():
     return """
         <h1>Hello World!</h1>
-        <p style="color:crimson">Group web <b>10</b></p>
+        <p style="color:crimson">Group web <b>15</b></p>
         """
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=8080, debug=True)
