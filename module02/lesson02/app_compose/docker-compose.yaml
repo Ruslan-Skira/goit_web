@@ -3,7 +3,7 @@ services:
   web:
     build: .
     ports:
-      - "3000:5000"
+      - "8000:8000"
     container_name: app_users
     restart: unless-stopped
     networks:
@@ -12,8 +12,10 @@ services:
     image: mongo
     container_name: db
     restart: unless-stopped
+
+      - serviceName
     volumes:
-      - /e/datadb:/data/db
+      - /tmp/mongo-data:/data/db
     networks:
       - app-networks
 networks:

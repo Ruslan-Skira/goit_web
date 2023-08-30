@@ -8,7 +8,7 @@ def worker(event: Event):
         sleep(1)
         logging.debug(f'Run iteration')
 
-        if event.is_set():
+        if event.is_set():  # Stop Thread by checking is_set()
             break
 
 
@@ -19,7 +19,7 @@ if __name__ == '__main__':
     th = Thread(target=worker, args=(e, ))
     th.start()
 
-    sleep(3)
-    e.set()
+    sleep(5) # Changing this will add new line of logging text.
+    e.set()  # here we put set to True and is_set() -> False
 
     logging.debug('End program')

@@ -3,6 +3,7 @@ from time import sleep
 import logging
 
 
+
 def master(con: Condition):
     logging.debug('Master work hard')
     sleep(1)

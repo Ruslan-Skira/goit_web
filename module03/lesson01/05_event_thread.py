@@ -2,16 +2,15 @@ from threading import Event, Thread
 from time import sleep
 import logging
 
-
 def master(event: Event):
     sleep(1)  # Some work
     logging.debug('Set event...')
-    event.set()
+    event.set()  #starting event
 
 
 def worker(event: Event):
     logging.debug(f'waiting...')
-    event.wait()
+    event.wait() # starting waiting event
     # some work
     logging.debug(f'finished')
 
