@@ -4,7 +4,7 @@ def add(a, b):
 
 def add_c(a, b, cb):  # Коли ми не знаємо скільки часу займе виконання
     r = a + b
-    cb(r)
+    cb(r, 'callback')
     return r
 
 

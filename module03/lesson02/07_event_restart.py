@@ -21,7 +21,7 @@ if __name__ == '__main__':
     event.set()
     sleep(3)
     print('Start!')
-    event.clear()
+    event.clear() # mark the event as not set
     sleep(3)
     print('Stop!')
     event.set()

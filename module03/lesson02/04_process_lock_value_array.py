@@ -4,14 +4,23 @@ from sys import exit
 
 
 class Point(Structure):
+    """
+    Abstract base class for structures in native byte order.
+    Concrete structure and union types must be created by subclassing one of these types, and at least define a _fields_ class variable.
+    c_double - float
+    c_int - int
+    """
     _fields_ = [('x', c_double), ('y', c_double)]
 
 
 def worker(val: Value, string: Array, arr: Array):
-    print(f"Start process: {current_process().name}")
+    """
+
+    """
+    print(f"Start process: {current_process().name}")  # example of getting the main process from a child of the main process
     with val.get_lock():
         val.value += 1
-        print(f"Process: {current_process().name}: {val.value}")
+        print(f"Process: {current_process().name}: {val.value}") # report the name of the main process
     with string.get_lock():
         string.value = string.value.upper()
     with arr.get_lock():

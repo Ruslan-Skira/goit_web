@@ -6,7 +6,7 @@ class MyProcess(Process):
     def __init__(self, group=None, target=None, name=None, args=(), kwargs=None, *, daemon=None):
         super().__init__(group=group, target=target, name=name, daemon=daemon)
         self.args = args
-        self.kwargs = kwargs
+        self.kwargs = kwargs  # here could be data
 
     def run(self) -> None:
         self.kwargs.get('log')(f"args: {self.args}")
