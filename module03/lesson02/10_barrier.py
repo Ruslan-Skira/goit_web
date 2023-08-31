@@ -7,7 +7,7 @@ from time import sleep, ctime
 def worker(barrier: Barrier):
     name = current_process().name
     print(f"Start thread {name}: {ctime()}")
-    sleep(randint(1, 3))  # Имитируем какую-то работу
+    sleep(randint(1, 3))
     barrier.wait()
     print(f"Barrier crossed for {name}")
     print(f"End work thread {name}: {ctime()}")

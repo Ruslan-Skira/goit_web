@@ -22,7 +22,7 @@ if __name__ == "__main__":
         pool.apply_async(worker, callback=callback)
         pool.apply_async(worker, callback=callback)
         pool.close()  # перестати виділяти процеси в пулл
-        # p.terminate()  # убить всех
+        # p.terminate()  # убити всіх
         pool.join()  # дочекатися закінчення всіх процесів
 
     print(f"End {current_process().name}")
