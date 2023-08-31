@@ -11,13 +11,13 @@ class PersonInfo:
 
 class PersonPhoneNumber(PersonInfo):
     def __init__(self, phone: str, operator_code: str):
-        if operator_code != '050':
+        if operator_code != '50':
             raise ValidPhoneException('Це не валідний оператор')
         self.phone = phone
         self.operator_code = operator_code
 
     def value_of(self) -> str:
-        return f'+38({self.operator_code}){self.phone}'
+        return f'+380({self.operator_code}){self.phone}'
 
 
 class PersonAddress(PersonInfo):
@@ -46,7 +46,7 @@ class Person:
 if __name__ == '__main__':
 
     address = PersonAddress('36007', 'Poltava', 'European, 28')
-    phone = PersonPhoneNumber('9995544', '050')
+    phone = PersonPhoneNumber('9995544', '50')
     person = Person('Alexander', phone, address)
     print(person.get_phone_number())
     print(person.get_address())
