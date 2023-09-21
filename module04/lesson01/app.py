@@ -19,11 +19,11 @@ class HttpGetHandler(BaseHTTPRequestHandler):
 
         match pr_url.path:
             case '/':
-                self.send_html_file('index.html')
+                self.send_html_file('module04/lesson01/index.html')
             case '/blog':
                 self.send_html_file('blog.html')
             case '/contact':
-                self.send_html_file('contact.html')
+                self.send_html_file('contact.html') 
             case _:
                 file = BASE_DIR.joinpath(pr_url.path[1:])
                 if file.exists():

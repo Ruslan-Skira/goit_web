@@ -14,10 +14,10 @@ async def request(url: str):
                     r = await resp.json()
                     return r
                 logging.error(f"Error status: {resp.status} for {url}")
-                return None
+                return
         except aiohttp.ClientConnectorError as err:
             logging.error(f"Connection error: {str(err)}")
-            return None
+            return
 
 
 async def get_exchange():

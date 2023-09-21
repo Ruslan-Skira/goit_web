@@ -2,7 +2,7 @@ import logging
 
 from psycopg2 import DatabaseError
 
-from lesson02.connection import create_connection
+from connection import create_connection
 
 if __name__ == '__main__':
     sql_expression_all = "SELECT * FROM users WHERE id = %s"

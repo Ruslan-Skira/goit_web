@@ -15,6 +15,10 @@ if __name__ == '__main__':
         process.append(pr)
 
     [print(pr.exitcode, end=" ") for pr in process]  # exitcode None process not ended
+
     print('\n', '*'*8, sep='\n')
+
     [pr.join() for pr in process]
+    print('After join')
+
     [print(pr.exitcode, end=" ") for pr in process]  # 0 process ended or N from sys.exit(N)

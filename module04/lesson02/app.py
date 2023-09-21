@@ -19,7 +19,7 @@ class HttpGetHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-        pr_url = urllib.parse.urlparse(self.path)
+        pr_url = urllib.parse.urlparse(self.path)  # path method сontains the request path.
 
         match pr_url.path:
             case '/':

@@ -3,15 +3,17 @@ import socket
 
 def client():
     host = socket.gethostname()
-    port = 5000
+    port = 5555
 
     client_socket = socket.socket()
     client_socket.connect((host, port))
     message = input('--> ')
 
     while message.lower().strip() != 'end':
-        client_socket.send(message.encode())
-        data = client_socket.recv(1024).decode()
+
+        client_socket.send(message.encode())# send message to server
+
+        data = client_socket.recv(1024).decode()  # recieve message from server
         print(f'received message: {data}')
         message = input('--> ')
 

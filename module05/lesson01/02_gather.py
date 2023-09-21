@@ -1,7 +1,7 @@
 import asyncio
 from time import sleep, time
 
-from faker import Faker
+from faker import Faker  # pip install faker
 
 fake = Faker()
 
@@ -21,19 +21,22 @@ async def main():
         get_user_async(1),
         get_user_async(2),
         get_user_async(3)
-    )
+    )  # Run all coroutin
     return r
 
 
 if __name__ == '__main__':
     start = time()
+
     r = asyncio.run(main())
     print(r)
-    print(time() - start)
+    print(time() - start, 'Async')
     print('------------------------------')
+
     start = time()
+
     user4 = get_user_sync(4)
     user5 = get_user_sync(5)
     user6 = get_user_sync(6)
     print(user4, user5, user6)
-    print(time() - start)
+    print(time() - start, "SYNC")

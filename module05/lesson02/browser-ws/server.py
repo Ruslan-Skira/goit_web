@@ -13,6 +13,7 @@ async def handler(websocket, path):
 
 async def main():
     async with websockets.serve(handler, "localhost", 8000):
+
         await asyncio.Future()  # run forever
 
 

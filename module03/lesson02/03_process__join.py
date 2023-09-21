@@ -3,16 +3,16 @@ from multiprocessing import Process
 from time import sleep
 import os
 
-# def info(title):
-#     print(title)
-#     print('module name:', __name__)
-#     print('parent process:', os.getppid())
-#     print('process id:', os.getpid())
+def info(title):
+    print(title)
+    print('module name:', __name__)
+    print('parent process:', os.getppid())
+    print('process id:', os.getpid())
 
 def example_work(params):
     sleep(0.5)
     print(params)
-    # info('function example_work') # Process ID
+    info('function example_work') # Process ID
     sys.exit(0)
 
 

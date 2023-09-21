@@ -26,7 +26,7 @@ if __name__ == '__main__':
     start = time()
     # loop = asyncio.new_event_loop()
     # asyncio.set_event_loop(loop)
-    # r = loop.run_until_complete(main())
+    # r = loop.run_until_complete(main())  #run() analog
     r = asyncio.run(main())
     print(r)
     print(time() - start)

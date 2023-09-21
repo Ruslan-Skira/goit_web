@@ -2,7 +2,7 @@ import logging
 
 from psycopg2 import DatabaseError
 
-from lesson02.connection import create_connection
+from connection import create_connection
 
 
 def create_table(conn, sql_expression):

@@ -2,6 +2,9 @@ import multiprocessing as mp
 import time
 start = time.perf_counter()
 
+# from MIV.module import function_name
+
+
 
 
 def render_photo()-> None:
@@ -16,17 +19,17 @@ def render_photo()-> None:
 
 ### Example 2 Creating Processes
 if __name__ == "__main__":  # Need to start processes here, under the __name__
-#     p1 = mp.Process(target=render_photo)
-#     p2 = mp.Process(target=render_photo)
-#     p3 = mp.Process(target=render_photo)
+    # p1 = mp.Process(target=render_photo)
+    # p2 = mp.Process(target=render_photo)
+    # p3 = mp.Process(target=render_photo)
 
-#     p1.start()
-#     p2.start()
-#     p3.start()
+    # p1.start()
+    # p2.start()
+    # p3.start()
 
-#     p1.join()
-#     p2.join()
-#     p3.join()
+    # p1.join()
+    # p2.join()
+    # p3.join()
 
     processes = []
 

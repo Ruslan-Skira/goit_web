@@ -9,4 +9,4 @@ async def producer(message: str, host: str, port: int):
 
 
 if __name__ == '__main__':
-    asyncio.run(producer(message=sys.argv[1], host='localhost', port=4000))
+    asyncio.run(producer(message=sys.argv[0], host='localhost', port=4000))

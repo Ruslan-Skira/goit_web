@@ -2,7 +2,7 @@ import asyncio
 
 
 async def baz():
-    await asyncio.sleep(1)
+    await asyncio.sleep(10)
     return 'Hello world!'
 
 
@@ -16,6 +16,7 @@ async def main() -> str:
 
 if __name__ == '__main__':
     msg = asyncio.run(main())
+    
     print(f'In main process: {msg}')
 
 

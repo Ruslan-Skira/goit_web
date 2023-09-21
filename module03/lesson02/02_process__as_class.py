@@ -6,6 +6,9 @@ class MyProcess(Process):
     """
     Custom process class
     """
+
+
+
     def __init__(self, group=None, target=None, name=None, args=(), kwargs=None, *, daemon=None):
         super().__init__(group=group, target=target, name=name, daemon=daemon)
         self.args = args
