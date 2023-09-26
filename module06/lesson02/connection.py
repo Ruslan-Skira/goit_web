@@ -17,3 +17,18 @@ def create_connection():  # Creating custom context manager
     except OperationalError as err:
         raise RuntimeError(f"Failed to connect to the database: {err}")
 
+
+# class ContextManagerMy():
+"""How to create Context manager"""
+#     def __init__(self):
+#         print('init method called')
+
+#     def __enter__(self):
+#         print('enter method called')
+#         return self
+
+#     def __exit__(self, *args, **kwargs):
+#         print('from del')
+
+# with ContextManagerMy() as conn:
+#       print('hi from COntext manager')

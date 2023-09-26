@@ -23,7 +23,7 @@ if __name__ == '__main__':
                 try:
                     # cur.execute(sql_expression_all, (4, ))
                     # cur.execute(sql_expression_custom_field)
-                    cur.execute(sql_expression_regex)
+                    cur.execute(sql_expression_custom_field)
                     # print(cur.fetchone())
                     print(cur.fetchall())
                     conn.commit()

@@ -103,7 +103,13 @@ def insert_data_to_db(companies, employees, payments) -> None:
         # Фіксуємо наші зміни в БД
 
         con.commit()
-
+# import hashlib
+# def md5sum(t):
+#     return hashlib.md5(t).hexdigest()
+# con = sqlite3.connect("salary.db")
+# con.create_function("md5", 1, md5sum)
+# for row in con.execute("SELECT md5(?)", (b"foo",)):
+#     print(row)
 
 if __name__ == "__main__":
     companies, employees, posts = prepare_data(*generate_fake_data(NUMBER_COMPANIES, NUMBER_EMPLOYESS, NUMBER_POST))

@@ -6,16 +6,17 @@ from psycopg2 import DatabaseError
 from connection import create_connection
 
 fake = Faker()
+u = "UPDATE"
 
 if __name__ == '__main__':
-    sql_expression = "UPDATE users SET phone = %s WHERE id = %s"
+    sql_expression = f"{u} users SET phone = %s WHERE id = %s"
 
     try:
         with create_connection() as conn:
             if conn is not None:
                 cur = conn.cursor()
                 try:
-                    for i in range(50_000):
+                    for i in range(50):
                         cur.execute(sql_expression, (fake.phone_number(), i + 1))
                     conn.commit()
                 except DatabaseError as err:

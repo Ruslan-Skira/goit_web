@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine, Integer, String, ForeignKey, select, Text, and_, desc, func
 from sqlalchemy.orm import declarative_base, sessionmaker, Mapped, mapped_column, relationship
 
-engine = create_engine('sqlite:///:memory:', echo=False)  # noqa
-DBSession = sessionmaker(bind=engine)
+engine = create_engine('sqlite:///:memory:', echo=False)   # noqa
+DBSession = sessionmaker(bind=engine)  # a sessionmaker(), also in the same scope as the engine
 session = DBSession()
 
 Base = declarative_base()
@@ -10,7 +10,7 @@ Base = declarative_base()
 
 class User(Base):
     __tablename__ = 'users'
-    id: Mapped[int] = mapped_column(primary_key=True)
+    id: Mapped[int] = mapped_column(primary_key=True)  #
     fullname: Mapped[str] = mapped_column(String)
 
 
@@ -52,6 +52,7 @@ if __name__ == '__main__':
     # stmt = select(User).where(User.fullname == "Shaun Beck")
     # result = session.execute(stmt).scalar_one()
     # print(result.id, result.fullname)
+
     print('---------------------')
     stmt = select(User).where(User.fullname.like("%ha%"))
     result = session.execute(stmt)
