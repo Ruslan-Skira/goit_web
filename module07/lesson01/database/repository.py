@@ -1,3 +1,4 @@
+"""Full CRUD for todo tables"""
 from sqlalchemy import and_
 from .db import session
 from .models import User, Todo

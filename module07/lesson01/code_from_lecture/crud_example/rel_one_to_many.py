@@ -2,9 +2,11 @@ from sqlalchemy.engine import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 from sqlalchemy import Column, String, Integer, Text, ForeignKey
 
-engine = create_engine("sqlite:///lection_07_01.db")
+engine = create_engine("sqlite:///CRUD_07_01.db")
+
 Session = sessionmaker(bind=engine)
 session = Session()
+
 Base = declarative_base() #As introduced at Declarative Mapping, the Declarative style includes the ability to generate a mapped Table object at the same time, or to accommodate a Table or other FromClause object directly.
 
 

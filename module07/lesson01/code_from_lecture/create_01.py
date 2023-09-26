@@ -24,7 +24,7 @@ metadata.create_all(engine)
 
 with engine.connect() as conn:
     ins = users.insert().values(name='jack', fullname='Jack Jones')
-    print(str(ins))
+    print(str(ins), '--'*8)
     result = conn.execute(ins)
 
     s = select(users)

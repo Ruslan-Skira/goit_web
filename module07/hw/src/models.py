@@ -21,7 +21,7 @@ class Student(Base):
     id = Column(Integer, primary_key=True)
     fullname = Column(String(120), nullable=False)
     group_id = Column('group_id', ForeignKey('groups.id', ondelete='CASCADE'))
-    group = relationship('Group', backref='students')
+    group = relationship('Group', backref='students') # back_populates the same
 
 
 class Discipline(Base):
