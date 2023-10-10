@@ -1,6 +1,7 @@
 # Модуль 9: Web-scraping
 
 ## Заняття 1: Beautiful Soup
+Extensible Markup Language (XML) — це мова розмітки та формат файлів для зберігання, передачі та реконструкції довільних даних. Він визначає набір правил для кодування документів у форматі, який одночасно читається людиною та машиною.
 
 `example_lecture_notes.py` и `model.py` - Приклад з конспекту
 
@@ -19,13 +20,13 @@ scrapy startproject war_info
 Щоб знайти всі лінки
 
 ```bash
-scrapy genspider get_links index.minfin.com.ua 
+scrapy genspider get_links index.minfin.com.ua
 ```
 
 Щоб виконати збір даних
 
 ```bash
-scrapy losses get_links index.minfin.com.ua 
+scrapy losses get_links index.minfin.com.ua
 ```
 
 Запуск збору лінків. Великий параметр `-O` перезаписуємо файл, маленький дописуємо. Також добавить в файл `settings.py`

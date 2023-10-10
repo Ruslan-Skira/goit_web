@@ -1,0 +1,18 @@
+curl 'https://uk.wikipedia.org/wiki/%D0%9E%D0%B1%27%D1%94%D0%BA%D1%82%D0%BD%D0%B0_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0' \
+  -H 'authority: uk.wikipedia.org' \
+  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+  -H 'accept-language: en,en-US;q=0.9,uk;q=0.8' \
+  -H 'cache-control: no-cache' \
+  -H 'cookie: refcoll=min; GeoIP=NL:::52.38:4.90:v4; ukwikimwuser-sessionId=a82908e148398fba22df; VEE=visualeditor; WMF-Last-Access-Global=10-Oct-2023; WMF-Last-Access=10-Oct-2023; NetworkProbeLimit=0.001; WMF-DP=778,6b6' \
+  -H 'pragma: no-cache' \
+  -H 'referer: https://www.google.com/' \
+  -H 'sec-ch-ua: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'sec-fetch-dest: document' \
+  -H 'sec-fetch-mode: navigate' \
+  -H 'sec-fetch-site: cross-site' \
+  -H 'sec-fetch-user: ?1' \
+  -H 'upgrade-insecure-requests: 1' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36' \
+  --compressed
