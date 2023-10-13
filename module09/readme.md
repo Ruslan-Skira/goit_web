@@ -8,6 +8,7 @@ Extensible Markup Language (XML) — це мова розмітки та фор�
 `wars_info` - збір втрат російської армії з сайту `https://index.minfin.com.ua/ua/russian-invading/casualties/`
 
 ## Заняття 2: Фреймворк Scrapy
+Приклад лежить у static_war
 
 Створюємо проект
 
@@ -33,13 +34,13 @@ scrapy losses get_links index.minfin.com.ua
 наступний параметр `FEED_EXPORT_ENCODING = 'utf-8'`, щоб нормально записувалась укр мова.
 
 ```bash
-scrapy crawl get_links -O links.json
+scrapy crawl get_urls -O urls.json
 ```
 
 Запуск збору даних. Там вже очікуємо, що лежить заповнений файл `links.json`
 
 ```bash
- scrapy crawl losses -O losses.json
+ scrapy crawl get_losses -O losses.json
 
 ```
 

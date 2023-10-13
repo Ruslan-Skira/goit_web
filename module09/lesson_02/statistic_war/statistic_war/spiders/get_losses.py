@@ -27,7 +27,7 @@ class GetLossesSpider(scrapy.Spider):
                 continue
 
             result.update({"date": date})
-
+            ##################
             losses = element.xpath('div[@class="casualties"]/div/ul/li')
             for l in losses:
                 # print(' '.join(l.css('*::text').extract()))
@@ -38,4 +38,4 @@ class GetLossesSpider(scrapy.Spider):
             yield result
 
         for next_link in get_next_link():
-            yield scrapy.Request(self.start_urls[0] + next_link, method="GET")
+            yield scrapy.Request(url=self.start_urls[0] + next_link, method="GET")
