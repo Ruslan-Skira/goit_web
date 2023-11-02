@@ -1,7 +1,9 @@
 import time
-from fastapi import FastAPI, Path, Query, Depends, HTTPException, Request
+import pathlib
+from fastapi import FastAPI, Path, Query, Depends, HTTPException, Request, UploadFile, File
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
-from db import get_db, Note
+from database.db import get_db, Note
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 
@@ -79,3 +81,16 @@ async def process_time(request: Request, call_next):
     process_time = time.time() - start_time
     response.headers["X-Process-Time"] = str(process_time)
     return response
+
+@app.post("/uploadfile")
+async def upload_file(file: UploadFile = File()):
+    pathlib.Path("uploads").mkdir(exist_ok=True)
+    file_path = f"uploads/{file.filename}"
+    with open(file_path, "wb") as f:
+        f.write(await file.read())
+    return {"file_path": file_path}
+
+favicon_path = "/static/favicon.ico"
+@app.get("/favicon.ico")
+async def favicon():
+    return FileResponse(favicon_path)
