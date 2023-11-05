@@ -2,6 +2,7 @@ import time
 import pathlib
 from fastapi import FastAPI, Path, Query, Depends, HTTPException, Request, UploadFile, File
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from database.db import get_db, Note
 from sqlalchemy.orm import Session
@@ -9,18 +10,13 @@ from sqlalchemy import text
 
 app = FastAPI()
 
-
-class NoteModel(BaseModel):
-    name: str
-    description: str
-    done: bool
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
-class ResponseNoteModel(BaseModel):
-    done: bool
-    id: int = Field(default=1, ge=1)
-    name: str
-    description: str
+
+
+
+
 
 
 @app.get("/api/healthchecker")
@@ -90,7 +86,9 @@ async def upload_file(file: UploadFile = File()):
         f.write(await file.read())
     return {"file_path": file_path}
 
-favicon_path = "/static/favicon.ico"
+
+
+favicon_path = "favicon.ico"
 @app.get("/favicon.ico")
 async def favicon():
     return FileResponse(favicon_path)
