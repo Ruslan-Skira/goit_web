@@ -7,17 +7,11 @@ from pydantic import BaseModel, Field
 from database.db import get_db, Note
 from sqlalchemy.orm import Session
 from sqlalchemy import text
+from schemas import NoteModel, ResponseNoteModel
 
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
-
-
-
-
-
-
-
 
 @app.get("/api/healthchecker")
 def healthchecker(db: Session = Depends(get_db)):

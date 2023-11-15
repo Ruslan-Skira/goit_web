@@ -2,7 +2,9 @@ import redis
 from redis_lru import RedisLRU
 import timeit
 
-client = redis.StrictRedis(host="localhost", port=6379, password=None)
+client = redis.Redis(host='localhost',
+                 port=6379,
+                 db=0)
 cache = RedisLRU(client)
 
 
@@ -32,6 +34,6 @@ if __name__ == '__main__':
     print(f'Duration: {timeit.default_timer() - start_time}')
 
     start_time = timeit.default_timer()
-    fibonacci_cache(138)
+    fibonacci_cache(38)
     print(f'Duration: {timeit.default_timer() - start_time}')
 

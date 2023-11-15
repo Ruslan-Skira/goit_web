@@ -1,6 +1,6 @@
 import sys
-from sqlalchemy.orm import joinedload
-from sqlalchemy import and_
+from sqlalchemy.orm import joinedload  # is used to optimize data retrieval, ensuring that related data is loaded efficiently when needed.
+from sqlalchemy import and_ # Add additional criteria to the ON clause that’s represented by this relationship attribute.
 from datetime import datetime
 from database.db import session
 from database.models import Student, Teacher

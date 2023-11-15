@@ -16,4 +16,9 @@ def f(x):
 if __name__ == '__main__':
     print(f"First f(3): {f(3)}")
     print(f"Second f(3): {f(3)}")
-    
+
+
+
+
+
+

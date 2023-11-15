@@ -1,0 +1,2 @@
+startproject:
+	python main.py

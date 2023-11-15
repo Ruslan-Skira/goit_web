@@ -1,0 +1,1 @@
+start project `uvicorn app:app --host localhost --port 8000 --reload`

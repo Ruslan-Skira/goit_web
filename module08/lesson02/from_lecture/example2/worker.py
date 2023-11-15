@@ -5,7 +5,9 @@ import json
 
 credentials = pika.PlainCredentials('guest', 'guest')
 connection = pika.BlockingConnection(
-    pika.ConnectionParameters(host='localhost', port=5672, credentials=credentials))
+    pika.ConnectionParameters(host='localhost',
+                              port=5672,
+                              credentials=credentials))
 channel = connection.channel()
 
 channel.queue_declare(queue='task_queue', durable=True)
@@ -21,7 +23,8 @@ def callback(ch, method, properties, body):
 
 
 channel.basic_qos(prefetch_count=1)  # no new message untill worker finish first
-channel.basic_consume(queue='task_queue', on_message_callback=callback)
+channel.basic_consume(queue='line_two',
+                       on_message_callback=callback)
 
 
 if __name__ == '__main__':

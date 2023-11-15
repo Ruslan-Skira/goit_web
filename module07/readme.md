@@ -39,10 +39,12 @@ py .\lesson01\main.py --action create --title Test --desc 'Short text' --login k
 
 > Поля `contacts` у моделі `Student` спочатку немає як і моделі `ContactPerson`
 
-Після, за допомогою `alembic` створюємо міграції. Виконуємо скрипти з теки `seed`: `teachers.py`, `students.py` та
+Після, за допомогою `alembic` створюємо міграції.
+Виконуємо скрипти з теки `seed`: `teachers.py`, `students.py` та
 `relationship.py`
 
 Потім виконуємо запити з файлу `main.py`
+
 Запит 2 не оптимальний, пояснити чому.
 
 Інші операції CRUD показати з файлу `crud.py`
@@ -52,6 +54,7 @@ py .\lesson01\main.py --action create --title Test --desc 'Short text' --login k
 Виконати `seed/contact.py`, а потім запрос з файлу `main_contact.py`. Пояснюючи кожен крок.
 
 Показати хуки
+@property
 
 ```python
 @listens_for(Student, 'before_insert')

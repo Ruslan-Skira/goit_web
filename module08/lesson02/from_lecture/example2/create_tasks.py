@@ -10,8 +10,8 @@ connection = pika.BlockingConnection(
 channel = connection.channel()
 
 channel.exchange_declare(exchange='task_mock', exchange_type='direct')  # create exchange
-channel.queue_declare(queue='task_queue', durable=True)  # durable will help if rabbitmq catch error
-channel.queue_bind(exchange='task_mock', queue='task_queue') # connect
+channel.queue_declare(queue='line_two', durable=True)  # durable will help if rabbitmq catch error
+channel.queue_bind(exchange='task_mock', queue='line_two') # connect
 
 
 def main():
@@ -24,7 +24,7 @@ def main():
 
         channel.basic_publish(
             exchange='task_mock',
-            routing_key='task_queue',
+            routing_key='line_two',
             body=json.dumps(message).encode(),
             properties=pika.BasicProperties(
                 delivery_mode=pika.spec.PERSISTENT_DELIVERY_MODE

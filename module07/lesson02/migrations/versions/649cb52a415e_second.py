@@ -1,8 +1,8 @@
-"""add Contact
+"""second
 
-Revision ID: c9cc370264be
-Revises: 6d51f42928eb
-Create Date: 2022-11-16 04:09:37.354560
+Revision ID: 649cb52a415e
+Revises: 626c883f726f
+Create Date: 2023-09-28 20:34:51.373358
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'c9cc370264be'
-down_revision = '6d51f42928eb'
+revision = '649cb52a415e'
+down_revision = '626c883f726f'
 branch_labels = None
 depends_on = None
 

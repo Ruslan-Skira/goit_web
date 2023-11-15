@@ -1,4 +1,4 @@
-
+from pydantic import BaseModel, Field
 class NoteModel(BaseModel):
     name: str
     description: str

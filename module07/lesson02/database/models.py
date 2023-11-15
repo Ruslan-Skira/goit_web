@@ -22,6 +22,7 @@ class Teacher(Base):
         return self.first_name + ' ' + self.last_name
 
 
+
 class Student(Base):
     __tablename__ = 'students'
     id = Column(Integer, primary_key=True)
@@ -51,6 +52,7 @@ class Student(Base):
 
 
 class TeacherStudent(Base):
+    """m2m"""
     __tablename__ = 'teachers_to_students'
     id = Column(Integer, primary_key=True)
     teacher_id = Column('teacher_id', ForeignKey('teachers.id', ondelete='CASCADE'))

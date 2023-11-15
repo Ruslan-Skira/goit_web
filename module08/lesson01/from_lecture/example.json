@@ -1,0 +1,10 @@
+"db.cats.insertMany": (
+[{
+    name: 'Tom',
+    age: 19,
+    features: ['Loud', 'red']},
+{
+    name: 'Anfisa',
+    age: 4,
+    features: ['collor black']}
+    ])

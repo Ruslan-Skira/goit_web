@@ -1,4 +1,4 @@
-from celery import Celery
+from celery import Celery  # pip install celery
 
 BROKER_URL = 'redis://localhost:6379/0'
 BACKEND_URL = 'redis://localhost:6379/1'
