@@ -7,21 +7,22 @@ from pydantic import EmailStr
 
 from src.services.auth import auth_service
 from dotenv import load_dotenv
+from src.configuration.config import settings
 
 load_dotenv()
 
 conf = ConnectionConfig(
-    MAIL_USERNAME=os.environ['MAIL_USERNAME'],
-    MAIL_PASSWORD=os.environ['MAIL_PASSWORD'],
-    MAIL_FROM=os.environ['MAIL_FROM'],
-    MAIL_PORT=4655,
-    MAIL_SERVER="smtp.meta.ua",
-    MAIL_FROM_NAME="Rest API Application",
-    MAIL_STARTTLS=False,
-    MAIL_SSL_TLS=True,
-    USE_CREDENTIALS=True,
-    VALIDATE_CERTS=True,
-    TEMPLATE_FOLDER=Path(__file__).parent / 'templates',
+   MAIL_USERNAME=settings.mail_username,
+   MAIL_PASSWORD=settings.mail_password,
+   MAIL_FROM=settings.mail_from,
+   MAIL_PORT=settings.mail_port,
+   MAIL_SERVER=settings.mail_server,
+   MAIL_FROM_NAME="Desired Name",
+   MAIL_STARTTLS=False,
+   MAIL_SSL_TLS=True,
+   USE_CREDENTIALS=True,
+   VALIDATE_CERTS=True,
+   TEMPLATE_FOLDER=Path(__file__).parent / 'templates',
 )
 
 
